@@ -40,10 +40,10 @@ export default function MenuPage() {
             <HamburgerMenu />
             <Logo width={45} height={45} className="flex-shrink-0 border-2 border-white/20" />
             <div className="min-w-0 flex-1">
-              <h1 className="font-playfair text-xl md:text-3xl font-bold italic truncate">Swad Anusar</h1>
+              <h1 className="font-playfair text-lg md:text-2xl font-bold truncate">EXPRESS ARYAN</h1>
               <div className="flex items-center text-[10px] md:text-sm opacity-80 mt-0.5">
                 <MapPin className="w-2.5 h-2.5 md:w-3 md:h-3 mr-1 flex-shrink-0" />
-                <span className="truncate">Govindpuri, Gwalior</span>
+                <span className="truncate">Gole ka Mandir, Gwalior</span>
               </div>
             </div>
           </div>

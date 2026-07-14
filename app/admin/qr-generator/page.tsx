@@ -35,7 +35,7 @@ export default function QRGenerator() {
     if (!qrBlob) return
     const a = document.createElement('a')
     a.href = qrBlob
-    a.download = 'SwadAnusar-Menu-QR.png'
+    a.download = 'ExpressAryanRailCoach-Menu-QR.png'
     document.body.appendChild(a)
     a.click()
     document.body.removeChild(a)
@@ -48,7 +48,7 @@ export default function QRGenerator() {
         const blob = await response.blob()
         const file = new File([blob], 'menu-qr.png', { type: 'image/png' })
         await navigator.share({
-          title: 'Swad Anusar Digital Menu',
+          title: 'Express Aryan Rail Coach Restaurant - Digital Menu',
           text: 'Scan this QR to view our digital menu and place an order!',
           files: [file],
         })
@@ -63,8 +63,8 @@ export default function QRGenerator() {
   return (
     <div className="min-h-screen bg-[#FFF8F0] p-6 lg:p-10 font-poppins">
       <header className="mb-10 text-center max-w-2xl mx-auto">
-        <h1 className="text-4xl font-bold font-playfair text-primary mb-2 italic">Welcome to Swadanusar</h1>
-        <p className="text-text-secondary">Enjoy the delicious food</p>
+        <h1 className="text-4xl font-bold font-playfair text-primary mb-2">Express Aryan Rail Coach Restaurant</h1>
+        <p className="text-text-secondary">Gole ka Mandir, Gwalior — Digital Menu QR</p>
       </header>
 
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -75,7 +75,8 @@ export default function QRGenerator() {
             className="bg-white p-8 rounded-[3rem] shadow-2xl border border-border flex flex-col items-center text-center relative overflow-hidden"
         >
             <div className="absolute top-0 left-0 w-full h-2 bg-primary"></div>
-            <h2 className="text-2xl font-bold font-playfair text-primary mt-4 mb-1 italic">Swad Anusar</h2>
+            <h2 className="text-xl font-bold font-playfair text-primary mt-4 mb-0.5">EXPRESS ARYAN</h2>
+            <p className="text-xs font-semibold text-primary/70 mb-0.5">Rail Coach Restaurant</p>
             <p className="text-[10px] uppercase font-bold text-text-secondary opacity-60 mb-6 underline decoration-accent underline-offset-4 tracking-widest">Digital Menu</p>
             
             <div className="bg-background p-4 rounded-[2rem] border-2 border-primary mb-8 relative group">
@@ -91,7 +92,7 @@ export default function QRGenerator() {
             <p className="text-xs font-bold text-[#6B4226] flex items-center gap-2 mb-2 bg-[#FFF8F0] px-4 py-2 rounded-full">
                 <span className="text-lg">📱</span> Scan to View Menu & Order
             </p>
-            <p className="text-[10px] text-text-secondary opacity-60 italic">Govindpuri, Gwalior (MP)</p>
+            <p className="text-[10px] text-text-secondary opacity-60 italic">Gole ka Mandir, Gwalior</p>
         </motion.div>
 
         {/* Controls */}
