@@ -5,6 +5,9 @@ import { desc } from 'drizzle-orm'
 import { auth } from '@/lib/auth'
 import { bustCache } from '@/lib/cache'
 
+export const dynamic = 'force-dynamic'
+
+
 export async function GET() {
   const result = await db.query.categories.findMany({
     orderBy: [desc(categories.createdAt)],

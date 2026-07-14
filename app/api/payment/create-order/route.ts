@@ -2,6 +2,8 @@ import Razorpay from 'razorpay'
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 
+export const dynamic = 'force-dynamic'
+
 const razorpay = new Razorpay({
   key_id: process.env.RAZORPAY_KEY_ID!,
   key_secret: process.env.RAZORPAY_KEY_SECRET!,
@@ -17,7 +19,7 @@ export async function POST(req: NextRequest) {
       amount: Math.round(total * 100), // paise
       currency: 'INR',
       receipt: `rcpt_${orderId}`,
-      notes: { orderId, restaurant: 'Swad Anusar' },
+      notes: { orderId, restaurant: 'Express Aryan Rail Coach Restaurant' },
     }
     const rzpOrder = await razorpay.orders.create(options)
     return NextResponse.json({ razorpayOrderId: rzpOrder.id })

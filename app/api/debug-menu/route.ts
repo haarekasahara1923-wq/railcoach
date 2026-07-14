@@ -2,6 +2,9 @@ import { NextResponse } from 'next/server'
 import { db } from '@/lib/db'
 import { dishes } from '@/lib/db/schema'
 
+export const dynamic = 'force-dynamic'
+
+
 export async function GET() {
   const allDishes = await db.select().from(dishes)
   return NextResponse.json({

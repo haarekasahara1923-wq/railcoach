@@ -4,6 +4,9 @@ import { categories, dishes } from '@/lib/db/schema'
 import { eq } from 'drizzle-orm'
 import { getCached, setCached, TTL } from '@/lib/cache'
 
+export const dynamic = 'force-dynamic'
+
+
 export async function GET() {
   try {
     const cacheKey = 'menu:all'

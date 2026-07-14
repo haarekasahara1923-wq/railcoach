@@ -4,6 +4,9 @@ import { orders, inventoryItems } from '@/lib/db/schema'
 import { count, sum, sql, lt } from 'drizzle-orm'
 import { auth } from '@/lib/auth'
 
+export const dynamic = 'force-dynamic'
+
+
 export async function GET() {
   const session = await auth()
   if (!session || (session.user as any).role !== 'admin') {

@@ -4,6 +4,9 @@ import { restaurantInfo } from '@/lib/db/schema'
 import { auth } from '@/lib/auth'
 import { eq } from 'drizzle-orm'
 
+export const dynamic = 'force-dynamic'
+
+
 export async function GET() {
   const info = await db.select().from(restaurantInfo).limit(1)
   return NextResponse.json(info[0] || {})

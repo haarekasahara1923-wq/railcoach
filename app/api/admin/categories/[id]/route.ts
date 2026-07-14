@@ -5,6 +5,9 @@ import { eq } from 'drizzle-orm'
 import { auth } from '@/lib/auth'
 import { bustCache } from '@/lib/cache'
 
+export const dynamic = 'force-dynamic'
+
+
 export async function DELETE(
   req: NextRequest,
   { params }: { params: { id: string } }

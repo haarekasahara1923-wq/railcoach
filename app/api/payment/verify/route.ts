@@ -4,6 +4,9 @@ import { db } from '@/lib/db'
 import { orders } from '@/lib/db/schema'
 import { eq } from 'drizzle-orm'
 
+export const dynamic = 'force-dynamic'
+
+
 export async function POST(req: NextRequest) {
   try {
     const { razorpay_order_id, razorpay_payment_id, razorpay_signature, orderId } =

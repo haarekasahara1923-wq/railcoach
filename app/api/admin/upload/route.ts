@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { uploadDishImage } from '@/lib/cloudinary'
 
+export const dynamic = 'force-dynamic'
+
+
 export async function POST(req: NextRequest) {
   const session = await auth()
   if (!session || (session.user as any).role !== 'admin') {

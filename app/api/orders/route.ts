@@ -4,6 +4,9 @@ import { orders, orderItems } from '@/lib/db/schema'
 import { publishOrderEvent, cacheRecentEvent, CHANNELS } from '@/lib/pubsub'
 import { eq, and, ne } from 'drizzle-orm'
 
+export const dynamic = 'force-dynamic'
+
+
 export async function POST(req: NextRequest) {
   try {
     const data = await req.json()

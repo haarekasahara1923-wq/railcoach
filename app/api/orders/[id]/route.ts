@@ -5,6 +5,9 @@ import { eq } from 'drizzle-orm'
 import { publishOrderEvent, cacheRecentEvent, CHANNELS } from '@/lib/pubsub'
 import { auth } from '@/lib/auth'
 
+export const dynamic = 'force-dynamic'
+
+
 export async function PATCH(req: NextRequest, { params }: { params: { id: string } }) {
   try {
     const session = await auth()

@@ -4,6 +4,9 @@ import { orders } from '@/lib/db/schema'
 import { desc, notInArray } from 'drizzle-orm'
 import { auth } from '@/lib/auth'
 
+export const dynamic = 'force-dynamic'
+
+
 export async function GET() {
   const session = await auth()
   if (!session || !['admin', 'reception'].includes((session.user as any).role)) {
